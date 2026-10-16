@@ -20,13 +20,13 @@ function jouer(event) {
 
   let resultat = "Défaite";
   let message = document.querySelector("#message");
-  message.textContent = resultat;
   if (joueur === ordinateur) {
     resultat = "Égalité";
   } else if (joueur === "pierre" && ordinateur === "ciseaux") {
     resultat = "Victoire";
   }
   jeu.dataset.resultat = resultat;
+  message.textContent = resultat;
 
   document.querySelector("#choix").hidden = true;
   document.querySelector("#resultat").hidden = false;
