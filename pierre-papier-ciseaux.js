@@ -1,4 +1,4 @@
-document.querySelector("#pierre".onclick = jouer;
+document.querySelector("#pierre").onclick = jouer;
 document.querySelector("#papier").onclick = jouer;
 document.querySelector("#ciseaux").onclick = jouer;
 
