@@ -22,7 +22,11 @@ function jouer(event) {
   let message = document.querySelector("#message");
   if (joueur === ordinateur) {
     resultat = "Égalité";
-  } else if (joueur === "pierre" && ordinateur === "ciseaux") {
+  } else if (
+    (joueur === "pierre" && ordinateur === "ciseaux") ||
+    (joueur === "papier" && ordinateur === "pierre") ||
+    (joueur === "ciseaux" && ordinateur === "papier")
+  ) {
     resultat = "Victoire";
   }
   jeu.dataset.resultat = resultat;
