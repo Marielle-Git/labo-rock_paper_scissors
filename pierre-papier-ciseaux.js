@@ -2,6 +2,12 @@ document.querySelector("#pierre").onclick = jouer;
 document.querySelector("#papier").onclick = jouer;
 document.querySelector("#ciseaux").onclick = jouer;
 
+function afficherChoix(id, choix) {
+  let image = document.querySelector("#" + id);
+  image.src = "images/" + choix + ".svg";
+  image.alt = choix.charAt(0).toUpperCase() + choix.slice(1);
+}
+
 function jouer(event) {
   let jeu = document.querySelector("#jeu");
   let joueur = event.target.dataset.choix;
@@ -17,6 +23,9 @@ function jouer(event) {
 
   jeu.dataset.joueur = joueur;
   jeu.dataset.ordinateur = ordinateur;
+
+  afficherChoix("choix-joueur", joueur);
+  afficherChoix("choix-ordinateur", ordinateur);
 
   let resultat = "Défaite";
   let message = document.querySelector("#message");
